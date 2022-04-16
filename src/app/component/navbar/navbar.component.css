@@ -1,4 +1,6 @@
-/* .nav{
+.nav{
     border: none;
     justify-content: center;
-} */
+    border-radius: 20px !important;
+    letter-spacing: 1px;
+}
