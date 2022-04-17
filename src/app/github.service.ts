@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GithubService {
+  repo: any;
   
 
   constructor(private http:HttpClient) { }

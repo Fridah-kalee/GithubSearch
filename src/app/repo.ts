@@ -3,8 +3,8 @@ export class Repo {
         public name: string,
         public html_url: string,
         public description: string,
-        public language: string,
         public forks: number,
-        public created_at: Date
-      ) {}
+        public created_at: Date) {
+
+        }
 }
