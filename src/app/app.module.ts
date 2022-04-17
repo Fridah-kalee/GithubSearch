@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { UserComponent } from './component/user/user.component';
-import { ProfileComponent } from './component/profile/profile.component';
+
+
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProfileComponent } from './component/profile/profile.component';
     NavbarComponent,
     FooterComponent,
     UserComponent,
-    ProfileComponent
+
+   
   ],
   imports: [
     BrowserModule,
