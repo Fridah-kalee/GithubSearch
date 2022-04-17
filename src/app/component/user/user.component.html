@@ -53,17 +53,17 @@
     </div>
 
           <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6">
             <h4 style="text-align: center;"><strong>Repositories</strong></h4>
             <div *ngFor="let repo of repo">
+              <div class="row">
+                <div class="col-md-12">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-title">
                                 <a href="{{repo.html_url}}">{{repo.name}}</a>
-                                <span style="color: red;">Watchers: {{repo.watchers}}</span>
+                                <span style="color: red;">Watching: {{repo.watchers}}</span>
                                 <span style="color: red;">Forks: {{repo.forks}}</span>
-                                <p>{{repo.description}}</p>
-                                <p>{{repo.created_at | date}}</p>
+                                <p> {{repo.description}} </p>
+                                <p> {{repo.created_at | date}} </p>
                             </div>
                           </div>
                     </div>

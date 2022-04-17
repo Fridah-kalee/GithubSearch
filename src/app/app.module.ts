@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { UserComponent } from './component/user/user.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 
@@ -18,6 +19,7 @@ import { UserComponent } from './component/user/user.component';
     NavbarComponent,
     FooterComponent,
     UserComponent,
+    DateCountPipe,
 
    
   ],
