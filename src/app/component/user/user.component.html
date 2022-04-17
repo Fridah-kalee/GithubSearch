@@ -20,33 +20,33 @@
                               <h5 class="panel-title" style="color: black;">{{user.name}}</h5> <br>
                               <h6 class="panel-title" style="color: black;">{{user.login}}</h6>
                           </div>
-                          <a href="{{user.html_url}}" style="color: rgb(255, 0, 13);">View profile</a> <br>
+                          <div class="col-md-12">
+                            <div class="info">
+                                <p style="color: black;">{{user.bio}}</p>
+                                <button type="button" class="btn btn-info"style="margin-right: 5%;"><span>Repositories {{user.public_repos}}</span></button>
+                                <button type="button" class="btn btn-warning" style="margin-right: 5%;"><span>Followers {{user.followers}}</span></button>
+                                <button type="button" class="btn btn-info"><span>Following {{user.following}}</span></button>
+                                
+                            </div>
+                            <br>
+                            <ul>
+                                <strong>Username : </strong>{{user.name}}</ul>
+                            <ul>
+                              <strong>LogIn: </strong>{{user.login}}
+                            </ul>
+                            <ul >
+                              <strong>Location: </strong>{{user.location}}
+                            </ul>
+                            <ul >
+                              <strong>Website: </strong><a href="">{{user.blog}}</a>
+                            </ul>
+                            <ul >
+                              <strong>Membership Since: </strong>{{user.created_at| date}}
+                            </ul>
+                            <a href="{{user.html_url}}" style="color: rgb(255, 0, 13);">View profile</a>
                         </div>
-                      <div class="col-md-8">
-                          <div class="info">
-                              <p style="color: black;">{{user.bio}}</p>
-                              <button type="button" class="btn btn-info"><span>Repositories {{user.public_repos}}</span></button>
-                              <button type="button" class="btn btn-warning"><span>Followers {{user.followers}}</span></button>
-                              <button type="button" class="btn btn-info"><span>Following {{user.following}}</span></button>
-                              
-                          </div>
-                          <br>
-                          <ul>
-                              <strong>Username : </strong>{{user.name}}</ul>
-                          <ul>
-                            <strong>LogIn: </strong>{{user.login}}
-                          </ul>
-                          <ul >
-                            <strong>Location: </strong>{{user.location}}
-                          </ul>
-                          <ul >
-                            <strong>Website: </strong><a href="">{{user.blog}}</a>
-                          </ul>
-                          <ul >
-                            <strong>Membership Since: </strong>{{user.created_at| date}}
-                          </ul>
-                      </div>
-                  </div>
+                    </div>
+                        </div>
               </div>
           </div>
       </div>
