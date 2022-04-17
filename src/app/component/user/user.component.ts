@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/github.service';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,6 +8,7 @@ import { GithubService } from 'src/app/github.service';
 })
 export class UserComponent implements OnInit {
   user!: any;
+  repo!: any;
   
   constructor(private githubService:GithubService) { }
 
@@ -17,11 +19,12 @@ export class UserComponent implements OnInit {
         this.user=user
         console.log(user)
       }
-        
-      
-      
-    )
-    
-  }
-
+      )
+      this.githubService.getUserRepo().subscribe(
+        repo =>{
+          this.repo=repo
+          console.log(repo)
+        }
+      )
+   }
 }
