@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid my-3 d-flex flex-column justify-content-center text-center">
     <div class="container my-3 d-flex flex-column justify-content-center text-center">
   <div class="input-group mb-3 sm-w-100 w-50 mx-auto rounded-3">
     <nav class="navbar navbar-light bg-light">
@@ -14,13 +14,13 @@
           <div class="panel">
               <div class="panel-body">
                   <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                           <img src="{{user.avatar_url}}" class="rounded-circle img-fluid" alt="Avatar">
                           <div class="heading">
                               <h5 class="panel-title" style="color: black;">{{user.name}}</h5> <br>
                               <h6 class="panel-title" style="color: black;">{{user.login}}</h6>
                           </div>
-                          <div class="col-md-12">
+                
                             <div class="info">
                                 <p style="color: black;">{{user.bio}}</p>
                                 <button type="button" class="btn btn-info"style="margin-right: 5%;"><span>Repositories {{user.public_repos}}</span></button>
@@ -30,7 +30,8 @@
                             </div>
                             <br>
                             <ul>
-                                <strong>Username : </strong>{{user.name}}</ul>
+                                <strong>Username : </strong>{{user.name}}
+                              </ul>
                             <ul>
                               <strong>LogIn: </strong>{{user.login}}
                             </ul>
@@ -44,31 +45,39 @@
                               <strong>Membership Since: </strong>{{user.created_at| date}}
                             </ul>
                             <a href="{{user.html_url}}" style="color: rgb(255, 0, 13);">View profile</a>
-                        </div>
-                    </div>
-                        </div>
-              </div>
-          </div>
-      </div>
-    </div>
-
-          <div class="container-fluid">
-            <h4 style="text-align: center;"><strong>Repositories</strong></h4>
-            <div *ngFor="let repo of repo">
-              <div class="row">
-                <div class="col-md-12">
-                        <div class="card">
+                        
+                      </div>
+                      
+                      <div class="col-md-6">
+                        <h4><strong>Repositories</strong></h4>
+                        <div *ngFor="let repo of repo">
+                        <div class="card p-4" style="width: 45rem;margin-top: 20px;">
                             <div class="card-title">
                                 <a href="{{repo.html_url}}">{{repo.name}}</a>
-                                <span style="color: red;">Watching: {{repo.watchers}}</span>
-                                <span style="color: red;">Forks: {{repo.forks}}</span>
-                                <p> {{repo.description}} </p>
-                                <p> This repo was created on {{repo.created_at | date}} </p>
+                                <p>
+                                  <li>
+                                    {{repo.description}}
+                                  </li>
+                                </p>
+                               <p>
+                                 <li>
+                                   <span style="color: red;">Watching : {{repo.watchers}}</span>
+                                <span style="color: red;">Forks : {{repo.forks}}</span>
+                              </li>
+                              </p>
+                              <p>
+                                  <li>
+                                    This repo was lastly updated on {{repo.created_at | date}} 
+                                  </li>
+                                </p>
                             </div>
                           </div>
                     </div>
-                    
+                  </div>
                 </div>
-            </div>
-            </div>
+          </div>
+      </div>
+      
+    </div>
+
           
