@@ -9,6 +9,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { UserComponent } from './component/user/user.component';
 import { DateCountPipe } from './date-count.pipe';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -22,6 +23,7 @@ import { DateCountPipe } from './date-count.pipe';
     FooterComponent,
     UserComponent,
     DateCountPipe,
+    FormComponent,
     
     
 

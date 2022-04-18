@@ -9,6 +9,7 @@ import { GithubService } from 'src/app/github.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  username='Fridah-kalee'
   user!: any;
   repo!: any;
   
@@ -16,20 +17,24 @@ export class UserComponent implements OnInit {
     this.user = new Username("","",0,0,0,"","");
     this.repo = new Repo("","","",0,new Date());
    }
+   getOutput(newGituser:any):void{
+     this.username=newGituser
+     this.getRepo=(newGituser)
+     this.getUsers=(newGituser)
+     this.githubService.getUser(this.username).then((user)=>(this.user=user))
+     this.githubService.getUserRepo(this.username).subscribe((repo)=>{this.repo=repo})
+   }
+   getUsers(username: string):void{
+     this.githubService.getUser(username).then((user)=>(this.user=user))
+   }
+   getRepo(username: string):void{
+     this.githubService.getUserRepo(username).subscribe((repo)=>{this.repo=repo})
+   }
+
+  
 
   ngOnInit(): void {
-    this.githubService.getUser().subscribe(
-      
-      user =>{
-        this.user=user
-        console.log(user)
-      }
-      )
-      this.githubService.getUserRepo().subscribe(
-        repo =>{
-          this.repo=repo
-          console.log(repo)
-        }
-      )
+    this.getUsers(this.username)
+    this.getRepo(this.username)
    }
 }
